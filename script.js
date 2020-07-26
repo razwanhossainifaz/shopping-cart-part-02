@@ -19,8 +19,27 @@ function handleProductChange(product, isIncrease){
         productPrice = productNewCount * 59;
     }
     document.getElementById(product + 'Price').innerText = productPrice;
+    calculateTotal();
 }
 
+function calculateTotal() {
+    const phoneCount = getInputvalue('phone');
+    const caseCount = getInputvalue('case');
+
+    const subTotalPrice = (phoneCount * 1219) + (caseCount * 59);
+    document.getElementById('subTotal').innerText = subTotalPrice;
+
+    const tax = Math.round(subTotalPrice * 0.05);
+    document.getElementById('tax').innerText = tax;
+
+    const total = subTotalPrice + tax;
+    document.getElementById('total').innerText = total;
+}
+function getInputvalue(product){
+    const productInput = document.getElementById(product + 'Input');
+    const productCount = parseFloat(productInput.value);
+    return productCount;
+}
 
 // document.getElementById('phonePlus').addEventListener('click',function(){
 //     handleProductChange(true);
