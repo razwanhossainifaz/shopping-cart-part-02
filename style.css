@@ -1,9 +1,18 @@
 body{
 	background: #fff;
 }
+a{
+	text-decoration: none;
+	color: white;
+}
+a:hover{
+	text-decoration: none;
+	color: white;
+}
 .cart{
 	margin: 100px 0;
-	background-color: #F6F5FA;;
+	/* background-color: #01f7ff; */
+	background-image: linear-gradient(150deg, rgb(198, 251, 255) , rgb(0, 255, 255));
 	padding: 60px 0;
 }
 .total-price{
@@ -52,4 +61,9 @@ body{
 	font-size: 19px;
 	background-color: #2FBE70;
 	border: none;
+}
+.check-out:hover{
+	font-weight: 800;
+	background-color: orange;
+	transition: 0.25s;
 }
