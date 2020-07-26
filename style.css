@@ -66,4 +66,5 @@ a:hover{
 	font-weight: 800;
 	background-color: orange;
 	transition: 0.25s;
+	box-shadow: 5px 5px 10px gray;
 }
