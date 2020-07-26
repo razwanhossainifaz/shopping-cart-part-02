@@ -1,3 +1,27 @@
+/* ------------------- Handle phone,case increase and decrease by one function -------------- */
+
+function handleProductChange(product, isIncrease){
+    const productInput = document.getElementById(product + 'Input');
+    const productCount = parseFloat(productInput.value);
+    let productNewCount = productCount;
+    if(isIncrease == true){
+        productNewCount = productCount + 1;
+    }
+    if(isIncrease == false && productCount > 0){
+        productNewCount = productCount - 1;
+    }
+    productInput.value = productNewCount;
+    let productPrice = 0;
+    if(product == 'phone'){
+        productPrice = productNewCount * 1219;
+    }
+    if(product == 'case'){
+        productPrice = productNewCount * 59;
+    }
+    document.getElementById(product + 'Price').innerText = productPrice;
+}
+
+
 // document.getElementById('phonePlus').addEventListener('click',function(){
 //     handleProductChange(true);
 // })
@@ -8,20 +32,20 @@
 
 /* ---------------------- increase And Decrease Of iPhone ------------------------*/
 
-function handleProductChange(isIncrease){
-    const phoneInput = document.getElementById('phoneInput');
-    const phoneCount = parseFloat(phoneInput.value);
-    let phoneNewCount = phoneCount;
-    if(isIncrease == true){
-        phoneNewCount = phoneCount + 1;
-    }
-    if(isIncrease == false && phoneCount > 0){
-        phoneNewCount = phoneCount - 1;
-    }
-    phoneInput.value = phoneNewCount;
-    const phonePrice = phoneNewCount * 1219;
-    document.getElementById('phonePrice').innerText = phonePrice;
-}
+// function handleProductChange(isIncrease){
+//     const phoneInput = document.getElementById('phoneInput');
+//     const phoneCount = parseFloat(phoneInput.value);
+//     let phoneNewCount = phoneCount;
+//     if(isIncrease == true){
+//         phoneNewCount = phoneCount + 1;
+//     }
+//     if(isIncrease == false && phoneCount > 0){
+//         phoneNewCount = phoneCount - 1;
+//     }
+//     phoneInput.value = phoneNewCount;
+//     const phonePrice = phoneNewCount * 1219;
+//     document.getElementById('phonePrice').innerText = phonePrice;
+// }
 
 // document.getElementById('phonePlus').addEventListener('click',function(){
 //     const phoneInput = document.getElementById('phoneInput');
@@ -49,20 +73,21 @@ function handleProductChange(isIncrease){
 // document.getElementById('caseMinus').addEventListener('click', function(){
 //     handleCaseChange(false);
 // })
-function handleCaseChange(increase){
-    const caseInput = document.getElementById('caseInput');
-    const caseCount = parseFloat(caseInput.value);
-    let caseNewCount = caseCount;
-    if(increase == true){
-        caseNewCount = caseCount + 1
-    }
-    if(increase == false && caseCount > 0){
-        caseNewCount = caseCount - 1
-    }
-    caseInput.value = caseNewCount;
-    const casePrice = caseNewCount * 59;
-    document.getElementById('casePrice').innerText = casePrice;
-}
+
+// function handleCaseChange(increase){
+//     const caseInput = document.getElementById('caseInput');
+//     const caseCount = parseFloat(caseInput.value);
+//     let caseNewCount = caseCount;
+//     if(increase == true){
+//         caseNewCount = caseCount + 1
+//     }
+//     if(increase == false && caseCount > 0){
+//         caseNewCount = caseCount - 1
+//     }
+//     caseInput.value = caseNewCount;
+//     const casePrice = caseNewCount * 59;
+//     document.getElementById('casePrice').innerText = casePrice;
+// }
 
 
 // document.getElementById('caseMinus').addEventListener('click', function(){
